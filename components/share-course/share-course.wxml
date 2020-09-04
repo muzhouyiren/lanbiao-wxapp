@@ -1,0 +1,4 @@
+<!--components/share-course/share-course.wxml-->
+<poster id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bindtap="posClick" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+	<slot />
+</poster>

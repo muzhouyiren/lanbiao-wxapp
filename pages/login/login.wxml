@@ -1,0 +1,12 @@
+<!--pages/login/login.wxml-->
+<view class="login-box">
+	<view class="container">
+		<!-- <view class="logo"></view> -->
+    <image  class="logo" src="../../images/logo.png" mode="widthFix"></image>
+		<text class="title">让营销百花齐放</text>
+		<button class="login-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo" lang="zh_CN">微信登录</button>
+		<view class="tip">
+			登录蓝标大学代表你已同意 <text>《蓝标大学用户协议》</text>
+		</view>
+	</view>
+</view>

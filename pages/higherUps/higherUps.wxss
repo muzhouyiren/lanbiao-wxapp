@@ -1,0 +1,132 @@
+/* pages/higherUps/higherUps.wxss */
+.micro {
+  position: absolute;
+  right: 162rpx;
+  width: 43rpx;
+  height: 69rpx;
+  right: 90rpx;
+}
+
+.title {
+  padding: 35rpx 37rpx 50rpx;
+}
+
+.video-box {
+  width: 100%;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 171rpx;
+  height: 171rpx;
+}
+
+.audio-detail {
+  /* padding: 39rpx 37rpx 50rpx; */
+}
+
+.audio-box {
+  border-radius: 20rpx;
+  padding: 36rpx 48rpx 35rpx 36rpx;
+  background: #f5f5f5;
+  width: 100%;
+}
+
+.audio-box .tit {
+  font-size: 43.47rpx;
+  color: #2f2f2f;
+}
+
+.audio-box .source {
+  font-size: 28.98rpx;
+  color: #8b8b8b;
+  margin: 22rpx 0 20rpx;
+}
+
+.audio-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 39rpx 37rpx 50rpx;
+  background-color: #f5f5f5;
+  border-radius: 20rpx;
+}
+
+slider {
+  margin: 10px 0;
+}
+
+.progress {
+  width: 80%;
+}
+
+.progress .time {
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28.98rpx;
+  color: #8b8b8b;
+}
+
+.control {
+  margin-top: -30rpx;
+  width: 43rpx;
+  height: 69rpx;
+}
+
+.recommend-title {
+  color: #2f2f2f;
+  font-size: 43.48rpx;
+  margin-bottom: 30rpx;
+  border-top: 1px solid #c5c5c5;
+  padding-top: 20rpx;
+}
+
+.higherUps-list .lis {
+  padding: 0;
+  display: flex;
+}
+
+.higherUps-list .lis .ico {
+  width: 122rpx;
+  height: 121rpx;
+  margin: 20rpx 0;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+.higherUps-list .lis .right {
+  display: block;
+  padding: 35rpx 0 20rpx;
+  width: 532rpx;
+  margin-left: 24rpx;
+}
+
+.higherUps-list .lis .right .higherUps-title {
+  font-size: 32.61rpx;
+  color: #2f2f2f;
+  font-weight: 700;
+}
+
+.higherUps-list .lis .right .higherUps-name {
+  margin-top: 15rpx;
+  font-size: 25.36rpx;
+  color: #8b8b8b;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#user {
+  width: auto;
+  padding: 10rpx;
+  font-size: 20rpx;
+  color: red;
+  background: transparent;
+}

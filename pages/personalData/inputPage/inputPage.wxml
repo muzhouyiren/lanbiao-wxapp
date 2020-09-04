@@ -1,0 +1,36 @@
+<!--pages/personalData/inputPage/inputPage.wxml-->
+
+<form bindsubmit="formSubmit">
+	<view class="form-cont">
+		<!-- 昵称 -->
+		<view class='list' wx:if="{{nickNameShow}}">
+			<input placeholder="请输入昵称" id="nickName" name="nickName" value='{{nickName}}' bindinput='getInput' focus="{{isfocus}}"></input>
+			<view class="delete" bindtap="deleteBtn" wx:if="{{!disabled}}">
+				<image class="close" src="../../../images/close.png" mode="widthFix"></image>
+			</view>
+		</view>
+		<!-- 手机号 -->
+		<view wx:if="{{mobileShow}}">
+			<view class='list'>
+				<input type='number' focus placeholder='请输入手机号码' placeholder-style="color: #8b8b8b;" maxlength='11' id="mobile" name="mobile" bindinput='getInput' value="{{mobile}}"></input>
+				<text bindtap="sendCode">{{sendText}}</text>
+			</view>
+			<view class='list'>
+      <!-- <input placeholder="验证码" id="msgcode" name="msgcode" value='{{msgcode}}' bindinput='getInput' focus="{{isfocus}}"></input> -->
+				<input placeholder="验证码" id="msgcode" name="msgcode" value='{{msgcode}}' bindinput='getInput' ></input>
+				<view class="delete" bindtap="deleteBtn" wx:if="{{!disabled}}">
+					<image class="close" src="../../../images/close.png" mode="widthFix"></image>
+				</view>
+			</view>
+			<button class="bind-btn" open-type="getPhoneNumber" bindgetphonenumber="getTelNumber">快速绑定</button>
+		</view>
+		<!-- 专业 -->
+		<view class='list professional' wx:if="{{professionalShow}}">
+			<input placeholder="请输入专业" id="professional" name="professional" value='{{professional}}' bindinput='getInput' focus="{{isfocus}}"></input>
+			<view class="num">20</view>
+		</view>
+		<view>
+			<button class="save-btn" disabled="{{disabled}}" formType="submit">保存</button>
+		</view>
+	</view>
+</form>

@@ -1,0 +1,35 @@
+<!--pages/higherUps/higherUps.wxml-->
+<view class="main">
+  <view class="pr">
+    <image src="../../images/higher-ups-audio.jpg" mode="widthFix"></image>
+    <view class="title">
+      <view class="mb-20 color-8b8b8b">大咖说</view>
+      <text class="font-55">胡百精\n营销之美值得品味⼀⽣</text>
+      <!-- <text class="font-55">胡百精</text>
+      <text class="font-55">营销之美值得品味⼀⽣</text> -->
+    </view>
+    <!-- <image class="micro" src="../../images/icon-micro.png" mode="widthFix"></image> -->
+  </view>
+
+  <view class="audio-detail">
+    <view class="audio-box">
+      <view class="tit">营销之美值得品味⼀⽣</view>
+      <view class="source">来自大咖说胡百精</view>
+      <view class="audio-view">
+        <!-- 进度条时间 -->
+        <view class='progress'>
+          <wxzx-slider id='wxzxSlider8' stroke-width='20' radius='10' value="40"></wxzx-slider>
+          <view class='time'>
+            <view>{{pass_time}}</view>
+            <view>{{total_time}}</view>
+          </view>
+        </view>
+        <!-- 图标 -->
+        <view class='control' bindtap="bindIsPlay">
+          <image class="micro" wx:if="{{isPlay}}" src="../../images/icon-micro.png" mode="widthFix"></image>
+          <image class="micro" wx:else src="../../images/icon-micro2.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

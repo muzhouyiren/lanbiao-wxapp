@@ -1,0 +1,105 @@
+<!--index.wxml-->
+<view class="main">
+	<view wx:for="{{columnList}}" wx:key="id" wx:for-item="item">
+		<view wx:if="{{item.typeMark == 'AboutUs'}}" class="section" bindtap="toInfo">
+			<navigator url="{{item.url}}">
+				<image src="{{item.image}}" mode="widthFix"></image>
+				<text class="up-txt pa-left-right-40 font-55 color-fff">{{item.title==null?'':item.title}}\n{{item.subTitle==null?'':item.subTitle}}</text>
+				<text class="down-txt pa-left-right-40 color-fff">{{item.summary==null?'':item.summary}}</text>
+			</navigator>
+		</view>
+
+		<view wx:elif="{{item.typeMark == 'Cases'}}" class="section">
+			<navigator url="{{item.url}}">
+				<image src="{{item.image}}" mode="widthFix"></image>
+				<view class="img-02-txt pa-left-right-40 color-fff">
+					<view class="mb-20">{{item.name}}</view>
+					<text class="font-55">{{item.title}}</text>
+				</view>
+				<view class="say-title color-8b8b8b">{{item.summary}}</view>
+			</navigator>
+		</view>
+
+		<view wx:elif="{{item.typeMark == 'Lecturer'}}" class="section">
+			<navigator url="{{item.url}}">
+				<image src="{{item.image}}" mode="widthFix"></image>
+				<view class="img-02-txt pa-left-right-40">
+					<view class="mb-20 color-8b8b8b">{{item.name}}</view>
+					<text class="font-55">{{item.title}}\n{{item.subTitle}}</text>
+				</view>
+				<view class="pa-left-right-40 down-txt color-8b8b8b">{{item.summary}}</view>
+			</navigator>
+		</view>
+
+		<view wx:elif="{{item.typeMark == 'HigherUps'}}" class="section">
+			<navigator url="{{item.url}}">
+				<image src="{{item.image}}" mode="widthFix"></image>
+				<image class="micro" src="../../images/icon-micro.png" mode="widthFix"></image>
+				<view class="pad-left-right-40 img-04-txt">
+					<view class="mb-20 color-8b8b8b">{{item.name}}</view>
+					<text class="font-55">{{item.title}}\n{{item.subTitle}}</text>
+				</view>
+			</navigator>
+		</view>
+
+		<view wx:elif="{{item.typeMark == 'Course'}}" class="section">
+			<navigator url="{{item.url}}">
+				<view class="video-box">
+					<image src="{{item.image}}" mode="widthFix"></image>
+					<!-- <image class="play-btn" src="../../images/icon-play.png"></image> -->
+				</view>
+				<view class="img-05-txt pad-left-right-40">
+					<view class="mb-20 color-8b8b8b">{{item.name}}</view>
+					<view class="font-55 mb-40">{{item.title}}</view>
+					<view class="mb-20 color-8b8b8b">{{item.summary}}</view>
+				</view>
+			</navigator>
+		</view>
+
+		<view wx:elif="{{item.typeMark == 'Internship'}}" class="section">
+			<navigator url="{{item.url}}">
+				<view class="img-06-txt pad-left-right-40">
+					<view class="mb-20 color-8b8b8b">{{item.name}}</view>
+					<text class="font-55">{{item.title}}\n{{item.subTitle}}</text>
+				</view>
+				<image src="{{item.image}}" mode="widthFix"></image>
+				<view class="pa-left-right-40 down-txt color-8b8b8b">{{item.summary}}</view>
+			</navigator>
+		</view>
+
+		<view wx:elif="{{item.typeMark == 'MyCourse'}}" class="section" bindtap="toMyCourse">
+			<image src="{{item.image}}" mode="widthFix"></image>
+			<view class="img-02-txt pa-left-right-40 color-fff">
+				<view class="mb-20">{{item.name}}</view>
+				<text class="font-55 color-fff">{{item.title}}</text>
+			</view>
+			<view class="pa-left-right-40 down-txt bottom-10 color-fff">{{item.summary}}</view>
+		</view>
+	</view>
+
+	<view class="section">
+		<image src="../../images/index_08.jpg" mode="widthFix"></image>
+		<!-- <view class="img-02-txt pa-left-right-40 color-fff">
+			<view class="mb-20">{{item.name}}</view>
+			<text class="font-55 color-fff">{{item.title}}</text>
+		</view>
+		<view class="pa-left-right-40 down-txt bottom-10 color-fff">{{item.summary}}</view> -->
+	</view>
+
+	<view class="section">
+		<image src="../../images/index_09.jpg" mode="widthFix"></image>
+		<!-- <view class="img-02-txt pa-left-right-40 color-fff">
+			<view class="mb-20">{{item.name}}</view>
+			<text class="font-55 color-fff">{{item.title}}</text>
+		</view>
+		<view class="pa-left-right-40 down-txt bottom-10 color-fff">{{item.summary}}</view> -->
+	</view>
+
+	<view class="container">
+		<view class="font-32 color-8b8b8b">关注微信号<span style="color:#9dc0f1">“蓝标大学”</span>了解详情</view>
+		<!-- <view class="font-45 tel">010-66688899</view> -->
+	</view>
+
+	<message showModal="{{showModal}}" isScroll="{{isScroll}}" dataList="{{messageList}}"></message>
+	
+</view>

@@ -1,0 +1,12 @@
+<!--pages/higherUps2/higherUps2.wxml-->
+<view class="main">
+  <view class="pr">
+    <image src="../../images/higher-ups.jpg" mode="widthFix"></image>
+    <image class="micro" src="../../images/icon-micro.png" mode="widthFix"></image>
+    <image class="play-btn" src="../../images/icon-play.png" mode="widthFix"></image>
+  </view>
+  <view class="title">
+    <view class="mb-20 color-8b8b8b">大咖说</view>
+    <text class="font-55">胡百精\n营销之美值得品味⼀⽣</text>
+  </view>
+</view>

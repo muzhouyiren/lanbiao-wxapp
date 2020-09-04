@@ -1,0 +1,112 @@
+/* pages/personalData/inputPage/inputPage.wxss */
+.form-cont {
+  padding: 0 36rpx;
+}
+
+.list {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dddddd;
+}
+
+.list.professional .num {
+  margin-top: 50rpx;
+  font-size: 28rpx;
+}
+
+.list input {
+  width: 100%;
+  height: 120rpx;
+  color: #8b8b8b;
+}
+
+.list .delete {
+  width: 50rpx;
+  height: 100%;
+}
+
+.list .close {
+  width: 33rpx;
+  height: 33rpx;
+}
+
+.list text {
+  width: 180rpx;
+  display: block;
+  font-family: PingFangSC-Regular;
+  font-size: 34rpx;
+  color: #9dc0f1;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.list text.sel {
+  color: #FAD330;
+}
+
+button.save-btn {
+  width: 100%;
+  color: #fff;
+  background-color: #9dc0f1;
+  border-radius: 40rpx;
+  margin: 180rpx 0 100rpx;
+  font-size: 32.61rpx;
+  font-weight: 700;
+  box-shadow: 0 10rpx 20rpx #e4e4e4;
+}
+
+button[disabled].save-btn {
+  box-shadow: none;
+}
+
+.bind-btn {
+  width: auto !important;
+  float: right;
+  background: white;
+  color: #9dc0f1;
+  font-weight: 351;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main {
+  background: #fff;
+  /* display:flex;
+  flex-direction:column;
+  align-items:center; */
+}
+
+/* .maincontainer{
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   
+}
+.journey-container{
+   display:flex;
+   flex-direction:row;
+    border: 1px solid #405f80;
+    width: 400rpx;
+    height: 100rpx;
+    border-radius: 10px;
+   justify-content:center;
+    align-items: center;
+    margin-top: 30rpx;
+    background: #405f80;
+}
+
+.journey{
+    font-size:22rpx;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+fourlayoutstyle{
+  display:flex;
+  flex-direction:column;
+  width: 100%rpx;
+  height: 300rpx;
+  align-items: center;
+  justify-content:center;
+} */

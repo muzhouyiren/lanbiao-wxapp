@@ -1,0 +1,34 @@
+<!--pages/internship/internship.wxml-->
+<view class="main">
+	<view class="wrap-center pb-26">
+		<view class="mb-20 color-8b8b8b">热岗速递</view>
+		<text class="font-55">{{posData.name}}</text>
+	</view>
+	<image src="{{posData.image}}" mode="widthFix"></image>
+	<view class="wrap-center">
+		<view class="position-details">
+			<view wx:if="{{posData.typeName != null}}">职位类型：{{posData.typeName}}</view>
+			<view wx:if="{{posData.createdTime != null}}">发布时间：{{posData.createdTime}}</view>
+			<view wx:if="{{posData.expiredTime != null}}">有效日期：{{posData.expiredTime}}</view>
+			<view wx:if="{{posData.basicRequirements != null}}">基本要求：{{posData.basicRequirements}}</view>
+			<view wx:if="{{posData.workingPlace != null}}">工作地点：{{posData.workingPlace}}</view>
+
+			<view class="mt-80">职位描述：</view>
+			<view>希望你具备以下能力或经验： </view>
+			<view wx:if="{{posData.description != null}}">{{posData.description}}</view>
+			<view wx:else>暂无描述</view>
+		</view>
+		<view class="title">推荐职位</view>
+		<view class="pos-list">
+			<view class="pos-list-cell" wx:for="{{posList}}" wx:key="index" data-item="{{item}}" bindtap="toInternShip">
+				<view class="pos-title">{{item.name}}</view>
+				<view class="pos-info">
+					<text wx:if="{{item.education != null}}">学历：{{item.education}}</text>
+					<text wx:if="{{item.experience != null}}">经验：{{item.experience}}</text>
+					<text wx:if="{{item.recruitCount != null}}">招聘人数：{{item.recruitCount}}人</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+</view>

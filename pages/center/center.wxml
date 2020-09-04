@@ -1,0 +1,99 @@
+<!--pages/center/center.wxml-->
+<view class="main">
+	<view class="top-box"></view>
+	<view class="center-cont wrap-center">
+		<view class="center box-shadow-common">
+			<view class="center-top">
+				<image src="../../images/center-head-bg.jpg" mode="widthFix"></image>
+				<view class="center-top-box">
+					<view class="head">
+						<image src="{{user.headIcon}}" mode="widthFix"></image>
+					</view>
+					<view class="info">
+						<view class="name">{{user.nickName}}</view>
+						<view class="other">
+							<!-- <text>2019-03-15</text> -->
+							<!-- <text wx:if="{{user.constellation != null && user.constellation != ''}}">{{user.constellation}}</text> -->
+						</view>
+					</view>
+					<view class="images">
+						<view class="msg {{newMessageCount == 0?'':'new'}}" bindtap="openMsg">
+							<image src="../../images/icon-msg.png" mode="widthFix"></image>
+						</view>
+						<image class="set" src="../../images/icon-set.png" mode="widthFix" bindtap="goPersonalData"></image>
+						<share config="{{shareConfig}}">
+							<image src="../../images/icon-share-white.png" mode="widthFix"></image>
+						</share>
+					</view>
+				</view>
+			</view>
+			<!-- 当我的课程数量大于1时，显示多套课程 -->
+			<view wx:if="{{myCourseList.length > 1}}">
+				<view class="center-bottom">
+					<view class="top">
+						<view>你的能力水平已达到
+							<text class="font-42">{{payLevel}}</text> 薪资要求</view>
+						<!-- <view>已完成 <text>24</text> 节课</view> -->
+					</view>
+					<view class="bottom">
+						<view class="li" wx:for="{{myCourseList}}" wx:key="index">
+							<view class="circle">
+								<circle draw='circwewle1' per='{{item.finishedCount/item.totalCount*100}}' r='80' />
+							</view>
+							<view class="des">{{item.myCourse.title}}\n已完成<text>{{item.finishedCount}}</text>节课</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view wx:else>
+				<view wx:if="{{myCourseList.length > 0}}" class="center-bottom-one" wx:for="{{myCourseList}}" wx:key="index">
+					<view class="left">
+						<view>预测目前薪资 <text class="font-42">{{payLevel}}</text></view>
+						<view>已完成 <text>{{item.finishedCount}}</text> 节课</view>
+					</view>
+					<view class="right pr">
+						<view class="circle">
+							<circle draw='circwewle' per='{{item.finishedPer}}' r='80' />
+						</view>
+						<!-- <image src="../../images/progress.png" mode="widthFix"></image> -->
+						<!-- <view class='canvasBox'> -->
+						<!-- <view class='bigCircle'>
+							<view class='littleCircle'></view>
+						</view> -->
+						<!-- <canvas canvas-id="runCanvas" id="runCanvas" class='canvas'></canvas> -->
+						<!-- </view> -->
+					</view>
+				</view>
+			</view>
+		</view>
+		<view wx:if="{{myCourseList.length > 0}}" class="center-course" wx:for="{{myCourseList}}" wx:key="index">
+			<view class="video-box box-shadow-common pr">
+				<image class="br-35" src="{{item.myCourse.image}}" mode="widthFix"></image>
+				<!-- <image class="play-btn" src="../../images/course-play.png" mode="widthFix" bindtap="continueLearn" data-myCourse="{{item}}"></image> -->
+				<share-course config="{{item.shareConfig}}">
+					<image class="icon-share" src="../../images/icon-share.png" mode="widthFix"></image>
+				</share-course>
+			</view>
+			<view class="font-55 mb-40 mt-36">{{item.myCourse.title}}</view>
+			<view class="course-details">
+				<view class="progress">已学习{{item.finishedPer}}%</view>
+				<view wx:if="{{item.finishedPer !== '100'}}" class="learn" bindtap="continueLearn" data-myCourse="{{item}}">继续学习</view>
+				<view wx:else class="learn">已完成</view>
+			</view>
+			<view class="title">课程目录</view>
+			<view class="course-list">
+				<view class='lis' wx:for="{{item.myCourse.chapterList}}" wx:key="index" wx:if="{{index<5}}" data-chapter="{{item}}" bindtap="toPlay">
+					<image class='ico' src='../../images/ico-play.jpg'></image>
+					<view class='right'>
+						<view class="course-num">{{item.number}}</view>
+						<view class="course-name">{{item.title}}</view>
+					</view>
+				</view>
+			</view>
+			<view class="look-all" bindtap="viewAll" data-myCourse="{{item}}">查看全部</view>
+		</view>
+
+		<message showModal="{{showModal}}" isScroll="{{isScroll}}" dataList="{{messageList}}" bind:myevent="getIsScroll"></message>
+
+	</view>
+</view>

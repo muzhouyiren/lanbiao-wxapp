@@ -1,0 +1,85 @@
+<!--pages/personalData/personalData.wxml-->
+<!--pages/user/user.wxml-->
+<view>
+	<view class="person-cont">
+		<view class="person_list portrait-list" data-src="{{portrait}}" data-name="portrait" bindtap="bindListTap">
+			<view class="item_left">头像</view>
+			<view class="item_right">
+				<image class="portrait" data-src="{{portrait}}" src="{{portrait}}"></image>
+				<image class="item_jian" src="../../images/arrow.png"></image>
+			</view>
+		</view>
+
+		<view class="person_list" data-name="nickName" bindtap="bindListTap" >
+			<view class="item_left">昵称</view>
+			<view class="item_right">
+				<view class="mr-20">{{nickName}}</view>
+				<image class="item_jian" src="../../images/arrow.png"></image>
+			</view>
+		</view>
+
+		<view class="person_list" data-name="mobile" bindtap="bindListTap" data-value="{{mobileValue}}">
+			<view class="item_left">手机号</view>
+			<view class="item_right">
+				<view class="mr-20">{{mobile}}</view>
+				<image class="item_jian" src="../../images/arrow.png"></image>
+			</view>
+		</view>
+
+		<view class="person_list" data-name="gender" bindtap="bindListTap">
+			<view class="item_left">性别</view>
+			<view class="item_right">
+				<view class="mr-20">{{gender}}</view>
+				<image class="item_jian" src="../../images/arrow.png"></image>
+			</view>
+		</view>
+		<view class="person_list" data-name="age" bindtap="bindListTap">
+			<view class="item_left">年龄</view>
+			<view class="item_right">
+				<view class="mr-20">
+					<picker mode="date" value="{{birthday}}" bindchange="bindDateChange">
+						<view class="picker">{{birthday}}</view>
+					</picker>
+				</view>
+				<image class="item_jian" src="../../images/arrow.png"></image>
+			</view>
+		</view>
+		<view class="person_list" data-name="constellation" bindtap="bindListTap">
+			<view class="item_left">星座</view>
+			<view class="item_right">
+				<view class="">
+          <picker bindchange="bindConstellationChange" value="{{constellation}}" range-key="{{'name'}}" range="{{constellationArr}}" data-id="{{id}}">
+            <view class="picker">
+              <input class="picker constellation-input" name="constellation" disabled placeholder-class="phcolor" placeholder="请选择" value='{{constellationArr[id].name}}'/>
+            </view>
+          </picker>
+        </view>
+				<image class="item_jian" src="../../images/arrow.png"></image>
+			</view>
+		</view>
+		<view class="person_list" data-name="belongs" bindtap="bindListTap" data-value="{{belongsValue}}">
+			<view class="item_left">所属</view>
+			<view class="item_right">
+				<view class="mr-20">{{belongs}}</view>
+				<image class="item_jian" src="../../images/arrow.png"></image>
+			</view>
+		</view>
+		<view class="person_list" data-name="professional" bindtap="bindListTap" data-value="{{majorValue}}">
+			<view class="item_left">专业</view>
+			<view class="item_right">
+				<view class="mr-20">{{major}}</view>
+				<image class="item_jian" src="../../images/arrow.png"></image>
+			</view>
+		</view>
+
+
+		<!-- <view class="person_list" wx:for="{{personList}}" wx:key="*this" data-name="{{item.nameCode}}" bindtap="bindListTap">
+      <view class="item_left">
+        <text>{{item.liName}}</text>
+      </view>
+      <view class="item_right">
+        <image class="item_jian" src="../../images/arrow.png" background-size="cover"></image>
+      </view>
+    </view> -->
+	</view>
+</view>

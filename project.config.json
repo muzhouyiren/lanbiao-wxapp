@@ -1,0 +1,210 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"preloadBackgroundData": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.1",
+	"appid": "wxaa79af7a03e864f3",
+	"projectname": "miniprogram-1",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "cases",
+					"pathName": "pages/cases/cases",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "aboutUs",
+					"pathName": "pages/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "starLecturer",
+					"pathName": "pages/starLecturer/starLecturer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "higherUps",
+					"pathName": "pages/higherUps/higherUps",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "higherUps2",
+					"pathName": "pages/higherUps2/higherUps2",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "courses",
+					"pathName": "pages/courses/courses",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "internship",
+					"pathName": "pages/internship/internship",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "myCourse",
+					"pathName": "pages/myCourse/myCourse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "listeningCourse",
+					"pathName": "pages/listeningCourse/listeningCourse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "buyH5",
+					"pathName": "pages/buyH5/buyH5",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "buyH52",
+					"pathName": "pages/buyH52/buyH52",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "center",
+					"pathName": "pages/center/center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "personalData",
+					"pathName": "pages/personalData/personalData",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "inputPage",
+					"pathName": "pages/personalData/inputPage/inputPage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "canvas",
+					"pathName": "pages/canvas/canvas",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "setHead",
+					"pathName": "pages/personalData/setHead/setHead",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "higherUpsAudio",
+					"pathName": "pages/higherUpsAudio/higherUpsAudio",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "audio",
+					"pathName": "pages/audio/audio",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "auditionCourse",
+					"pathName": "pages/auditionCourse/auditionCourse",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

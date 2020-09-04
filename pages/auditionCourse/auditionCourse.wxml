@@ -1,0 +1,36 @@
+<!--pages/listeningCourse/listeningCourse.wxml-->
+<view>
+	<view class="main">
+		<view class="pr">
+			<video wx:if="{{course.videoUrl != null && course.videoUrl != ''}}" class="video" id="myVideo" poster="{{course.image}}" src="{{urlBase+course.videoUrl}}" controls bindplay="play"></video>
+			<!-- <image src="{{urlBase+course.image}}" mode="widthFix"></image> -->
+			<!-- <image class="play-btn" src="../../images/course-play.png" mode="widthFix"></image> -->
+			<image class="icon-share" src="../../images/icon-share.png" mode="widthFix"></image>
+		</view>
+		<view class="wrap-center">
+			<view class="mb-20 color-8b8b8b">{{course.type}}</view>
+			<view class="font-55 mb-40">{{course.title}}</view>
+			<view class="operation">
+				<view class="left">
+					<image class="icon-ting" src="../../images/icon-ting.png" mode="widthFix"></image>
+					试听 {{auditionCount}}
+				</view>
+				<view class="right" bindtap="addLike">
+					<image class="icon-praise" src="../../images/icon-praise.png" mode="widthFix"></image>
+					点赞 {{likeCount}}
+				</view>
+			</view>
+			<view class="course-info">
+				{{course.summary == null?'':course.summary}}
+			</view>
+		</view>
+		<view class="wrap-center">
+			<view class="btn-div">
+				<button wx:if="{{course.preCourseId > 0}}" class="section-btn next" type="default" hover-class="section-btn-hover" bindtap="toPrev">上一节</button>
+				<button wx:else class="section-btn" type="default" hover-class="section-btn-hover" bindtap="toPrev">上一节</button>
+				<button wx:if="{{course.nextCourseId > 0}}" class="section-btn next" type="default" hover-class="section-btn-hover" bindtap="toNext">下一节</button>
+				<button wx:else class="section-btn" type="default" hover-class="section-btn-hover" bindtap="toNext">下一节</button>
+			</view>
+		</view>
+	</view>
+</view>

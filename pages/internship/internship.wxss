@@ -1,0 +1,37 @@
+/* pages/internship/internship.wxss */
+
+.position-details view {
+  font-size: 32.61rpx;
+  line-height: 60rpx;
+  color: #8b8b8b;
+  text-align: justify;
+  font-family: 'PingFang SC';
+}
+
+.title {
+  color: #2f2f2f;
+  font-size: 43.48rpx;
+  margin-top: 30rpx;
+  border-top: 1px solid #dbdbdb;
+  padding-top: 20rpx;
+  font-weight: 700;
+}
+.pos-list {
+  padding-bottom: 130rpx;
+}
+.pos-list-cell {
+  padding: 24rpx 0;
+  border-bottom: 1px solid #dddddd;
+}
+.pos-title {
+  font-size: 32.61rpx;
+  color: #2f2f2f;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+.pos-info text {
+  display: inline-block;
+  margin-right: 40rpx;
+  font-size: 25.36rpx;
+  color:#8b8b8b;
+}

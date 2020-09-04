@@ -1,0 +1,22 @@
+<!--pages/buyH52/buyH52.wxml-->
+<view class="main">
+  <image class="buy-h5-bg" src="../../images/buy-h5-bg2.jpg"></image>
+  <view class="buy-h5-title">
+    <image src="../../images/buy-h5-title2.png" mode="widthFix"></image>
+    <view class="operation">
+      <view class="left">
+        <image class="icon-ting" src="../../images/icon-ting-white.png" mode="widthFix"></image>
+        试听 999
+      </view>
+      <view class="right">
+        <image class="icon-praise" src="../../images/icon-praise-white.png" mode="widthFix"></image>
+        点赞 999
+      </view>
+    </view>
+  </view>
+  <view class="buy-h5-down">
+    <image src="../../images/buy-h5-des.png" mode="widthFix"></image>
+    <image class="buy-btn" src="../../images/buy-h5-btn.png" mode="widthFix" bindtap="toBuy"></image>
+    <!-- <button>立即订购</button> -->
+  </view>
+</view>

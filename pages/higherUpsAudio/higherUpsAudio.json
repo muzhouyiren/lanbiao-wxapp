@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "wxzx-slider": "../../components/wxzx-slider/wxzx-slider"
+  }
+}

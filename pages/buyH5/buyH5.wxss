@@ -1,0 +1,70 @@
+/* pages/buyH5/buyH5.wxss */
+.main {
+  background: #fcfcfc;
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 168rpx;
+  height: 169rpx;
+}
+
+/* .icon-share{
+  position: absolute;
+  top: 36rpx;
+  right: 36rpx;
+  width: 31rpx;
+  height: 31rpx;
+} */
+
+.operation {
+  display: flex;
+  font-size: 30.19rpx;
+  color: #8b8b8b;
+  margin-bottom: 35rpx;
+}
+.operation .left,.operation .right {
+  display: flex;
+  width: 33.33%;
+}
+.operation image {
+  margin-right: 13rpx;
+  padding-top:6rpx;
+}
+.operation .left .icon-ting {
+  width: 33rpx;
+  height: 29rpx;
+}
+.operation .right .icon-praise {
+  width: 28rpx;
+  height: 32rpx;
+}
+
+.course-info {
+  color: #8b8b8b;
+  font-size: 30rpx;
+  line-height: 45rpx;
+  /* display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden; */
+}
+
+button.buy-btn {
+  width: 100%;
+  color: #fff;
+  background-color: #9dc0f1;
+  border-radius: 40rpx;
+  margin: 70rpx 0 100rpx;
+  font-size: 32.61rpx;
+  font-weight: 700;
+}
+button::after{
+  border: none;
+}
+.other-button-hover {
+  color: #9dc0f1;
+  background-color: #f0f0f0;
+}

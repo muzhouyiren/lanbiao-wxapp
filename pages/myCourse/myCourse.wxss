@@ -1,0 +1,270 @@
+/* pages/myCourse/myCourse.wxss */
+
+.video {
+  width: 100%;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 168rpx;
+  height: 169rpx;
+}
+
+.operation {
+  display: flex;
+  font-size: 30.19rpx;
+  color: #8b8b8b;
+  margin-bottom: 35rpx;
+}
+
+.operation .left,
+.operation .right {
+  display: flex;
+  width: 33.33%;
+}
+
+.operation image {
+  margin-right: 13rpx;
+  padding-top: 6rpx;
+}
+
+.operation .left .icon-ting {
+  width: 33rpx;
+  height: 29rpx;
+}
+
+.operation .right .icon-praise {
+  width: 28rpx;
+  height: 32rpx;
+}
+
+.btn-div {
+  display: flex;
+  padding: 35rpx 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.btn-div button.section-btn {
+  width: 180rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  padding: 0;
+  font-size: 32.61rpx;
+  color: #ccc;
+  background: #f0f0f0;
+  border-radius: 28rpx;
+}
+
+.btn-div button.section-btn.next {
+  color: #9dc0f1;
+}
+
+.course-section {
+  display: flex;
+  margin: 35rpx 0 25rpx;
+  color: #8b8b8b;
+  font-size: 30.2rpx;
+  font-weight: 700;
+  line-height: 30rpx;
+}
+
+.course-section .square {
+  width: 26rpx;
+  height: 26rpx;
+  border-radius: 10rpx;
+  background: #9dc0f1;
+  margin-right: 20rpx;
+  margin-top: 2rpx;
+}
+
+.knowledge-img {
+  padding: 0 42rpx;
+}
+
+.knowledge-img image {
+  border-radius: 20rpx;
+  box-shadow: 0 0 24rpx #f1f1f1;
+}
+
+.orange-bg {
+  background: #f1c49d !important;
+}
+
+.green-bg {
+  background: #9df1a3 !important;
+}
+
+.home-work {
+  position: relative;
+  margin: 0 42rpx;
+  padding: 35rpx 39rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  box-shadow: 0 0 24rpx #f1f1f1;
+}
+
+.home-work .level-img {
+  position: absolute;
+  top: -30rpx;
+  right: -50rpx;
+  width: 210rpx;
+  height: 120rpx;
+  /* top: -14rpx;
+  right: -20rpx;
+  width: 141rpx;
+  height: 103rpx; */
+}
+
+.home-work .title {
+  color: #2f2f2f;
+  font-size: 30.2rpx;
+  font-weight: 700;
+}
+
+.textarea {
+  width: auto;
+  margin: 32rpx 0 24rpx;
+  padding: 24rpx;
+  padding-top: 10rpx !important;
+  height: 264rpx;
+  background: #f7f7f7;
+  border-radius: 20rpx;
+  /* line-height: 30rpx !important; */
+}
+
+.teacher {
+  font-size: 30.19rpx;
+  color: #e02e2e;
+  margin: 35rpx 0;
+}
+
+.btn-area {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.btn-area button {
+  width: 182rpx !important;
+  height: 56rpx;
+  line-height: 56rpx;
+  padding: 0;
+  margin: 0;
+  background: #f0f0f0;
+  font-size: 32.61rpx;
+  color: #9dc0f1;
+  border-radius: 28rpx;
+}
+
+.btn-area button.reset {
+  color: #ccc;
+}
+
+.question-work {
+  position: relative;
+  min-height: 430rpx;
+  padding-bottom: 100rpx;
+  margin-bottom: 160rpx;
+}
+
+.chat-room {}
+
+.chat-room text {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #eaeaea;
+  border-radius: 10rpx;
+  padding: 19rpx;
+  font-size: 30.2rpx;
+  color: #2f2f2f;
+  margin-left: 15rpx;
+  margin-bottom: 18rpx;
+  text-align: justify;
+
+}
+
+.chat-room text::after,
+.chat-room text::before {
+  content: "";
+  width: 0rpx;
+  height: 0rpx;
+  border-top: 15rpx solid transparent;
+  border-right: 15rpx solid;
+  border-bottom: 15rpx solid transparent;
+  position: absolute;
+  border-right-color: #eaeaea;
+  top: 50%;
+  margin-top: -16rpx;
+  left: -16rpx;
+}
+
+.chat-room text::after {
+  border-right-color: #fff;
+  left: -14rpx;
+}
+
+.chat-room text.answer {
+  background: #ebf2fc;
+  border: 1px solid #ebf2fc;
+  margin-bottom: 36rpx;
+}
+
+.chat-room text.answer::after,
+.chat-room text.answer::before {
+  border-right-color: #ebf2fc;
+}
+
+.question-form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* height: 70rpx; */
+  padding: 20rpx 20rpx;
+  background: #ebf2fc;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+}
+
+.question-input {
+  float: left;
+  width: 80%;
+}
+
+.placeholder-style {
+  color: #8b8b8b;
+  font-size: 25.37rpx;
+}
+
+.send-box {
+  float: right;
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.send-box button {
+  margin: 0;
+  padding: 0 1rpx;
+  background: transparent;
+  width: 80rpx;
+  font-size: 32.61rpx;
+  color: #9dc0f1;
+}
+
+.send-box .send-img {
+  width: 29rpx;
+  height: 29rpx;
+  /* margin-top: 10rpx; */
+}
+
+
+#user {
+  width: auto;
+  padding: 10rpx;
+  font-size: 20rpx;
+  color: red;
+  background: transparent;
+}

@@ -1,0 +1,2 @@
+<!--pages/task/task.wxml-->
+<web-view src="{{taskUrl}}"></web-view>

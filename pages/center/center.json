@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#2b30b8",
+  "usingComponents": {
+    "circle": "/components/circle/circle",
+    "share": "/components/share/share",
+    "share-course": "/components/share-course/share-course",
+    "message":"/components/message/message"
+  }
+}

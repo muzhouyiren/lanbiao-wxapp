@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/test/test",
+    "pages/center/center",
+    "pages/aboutUs/aboutUs",
+    "pages/cases/cases",
+    "pages/starLecturer/starLecturer",
+    "pages/higherUps/higherUps",
+    "pages/higherUps2/higherUps2",
+    "pages/higherUpsAudio/higherUpsAudio",
+    "pages/courses/courses",
+    "pages/internship/internship",
+    "pages/myCourse/myCourse",
+    "pages/listeningCourse/listeningCourse",
+    "pages/auditionCourse/auditionCourse",
+    "pages/buyH5/buyH5",
+    "pages/buyH52/buyH52",
+    "pages/personalData/personalData",
+    "pages/login/login",
+    "pages/personalData/setHead/setHead",
+    "pages/personalData/inputPage/inputPage",
+    "components/circle/circle",
+    "pages/logs/logs",
+    "pages/teachers/teachers",
+    "pages/task/task"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "蓝标大学",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#9dc0f1",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon-home1.png",
+        "selectedIconPath": "images/icon-home.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "我的",
+        "iconPath": "images/icon-mine.png",
+        "selectedIconPath": "images/icon-mine1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wxd947200f82267e58"
+  ]
+}

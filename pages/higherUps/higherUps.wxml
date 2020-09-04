@@ -1,0 +1,65 @@
+<!--pages/higherUps/higherUps.wxml-->
+<view class="main">
+	<view class="pr">
+		<!-- 头图或者视频的位置，如果有视频则显示视频，没有视频则显示头图 -->
+		<view wx:if="{{higherUps.videoUrl != null && higherUps.videoUrl != ''}}">
+			<video class="video-box" poster="{{higherUps.videoPoster}}" src="{{higherUps.videoUrl}}" controls autoplay="true">
+				<button id="user" animation="{{ani}}">{{motto}}</button>
+			</video>
+		</view>
+		<view wx:else>
+			<image src="{{higherUps.image}}" mode="widthFix"></image>
+			<image class="micro" src="../../images/icon-micro.png" mode="widthFix"></image>
+		</view>
+	</view>
+	<view class="title">
+		<!-- <view class="mb-20 color-8b8b8b">大咖说</view> -->
+		<text class="font-55">{{higherUps.name == null? '':higherUps.name}}\n{{higherUps.title}}</text>
+	</view>
+	<!-- 音频显示位置 -->
+	<view wx:if="{{higherUps.audioUrl != null && higherUps.audioUrl != ''}}" class="audio-view">
+		<view class="audio-detail">
+			<view class="audio-box">
+				<view class="tit">{{higherUps.title}}</view>
+				<view class="source">来自大咖说{{higherUps.name}}</view>
+				<view class="audio-view">
+					<!-- 进度条时间 -->
+					<view class='progress'>
+						<wxzx-slider id='wxzxSlider8' stroke-width='20' radius='10' value="40"></wxzx-slider>
+						<view class='time'>
+							<view>{{pass_time}}</view>
+							<view>{{total_time}}</view>
+						</view>
+					</view>
+					<!-- 图标 -->
+					<view class='control' bindtap="bindIsPlay">
+						<image class="micro" wx:if="{{isPlay}}" src="../../images/icon-micro2.png" mode="widthFix"></image>
+						<image class="micro" wx:else src="../../images/icon-micro.png" mode="widthFix"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- <audio poster="{{urlBase + higherUps.audioPoster}}" name="{{higherUps.title}}" author="{{higherUps.name}}" src="{{urlBase + higherUps.audioUrl}}" id="myAudio" controls loop></audio> -->
+	</view>
+
+	<!-- 图文内容 -->
+	<view class="text-style">
+		<view>{{higherUps.summary==null?'':higherUps.summary}}</view>
+		<view>{{higherUps.detail==null?'':higherUps.detail}}</view>
+	</view>
+
+	<view class="wrap-container" wx:if="{{higherUps != null && higherUps.recommendedList.length > 0}}">
+		<view class="recommend-title">推荐</view>
+		<view class="higherUps-list">
+			<view wx:for="{{higherUps.recommendedList}}" wx:key="index">
+				<view class='lis' data-id="{{item.id}}" bindtap="toHigherUps">
+					<image class='ico' src='{{item.image}}' lazy-load="true"></image>
+					<view class='right'>
+						<view class="higherUps-title">{{item.title}}</view>
+						<view class="higherUps-name">{{item.summary==null? '':item.summary}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,33 @@
+/* components/circle/circle.wxss */
+
+.circle_box, .circle_draw {
+  position: relative;
+}
+.circle_bg {
+  position: absolute;
+}
+
+.circle_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(236, 236, 236, 0.25);
+}
+
+.circle_txt {
+  position: absolute;
+  font-size: 28rpx;
+  color: #9dc0f1;
+  font-family: Arial Black;
+  width: 95rpx;
+  height: 95rpx;
+  border-radius: 50%;
+  font-weight: 700;
+  background: #fff;
+  line-height: 95rpx;
+  box-shadow: 0 0 20rpx rgba(211, 208, 208, 1);
+  /* margin-left: -2rpx; */
+  text-align: center;
+}

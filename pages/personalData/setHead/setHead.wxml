@@ -1,0 +1,4 @@
+<!--pages/personalData/setHead/setHead.wxml-->
+<view class="main">
+  <image class="head-img" src="{{imgUrl}}" mode="widthFix" bindlongtap="editImg"></image>
+</view>

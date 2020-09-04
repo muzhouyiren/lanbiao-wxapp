@@ -1,0 +1,101 @@
+/* components/message/message.wxss */
+
+/* 遮罩层 */
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #000;
+  /* z-index:998; */
+  opacity: 0.7;
+}
+
+/* 弹出层 */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 620rpx;
+  height: 80%;
+  /* z-index:999; */
+  margin: 0 auto;
+  padding: 50rpx 45rpx 140rpx 48rpx;
+  background-color: #fff;
+  border-radius: 25rpx;
+}
+
+.modal .modal-title {
+  font-size: 34rpx;
+  font-weight: 500;
+  color: #2f2f2f;
+  margin-bottom: 30rpx;
+}
+
+.modal .modal-close {
+  position: absolute;
+  bottom: -48rpx;
+  left: 50%;
+  width: 96rpx;
+  height: 96rpx;
+  transform: translate(-50%, 0);
+}
+
+.msg-list {
+  height: 100%;
+  /* overflow-y: auto; */
+}
+
+.msg-list .li {
+  position: relative;
+  /* height: 140rpx; */
+  padding: 40rpx 0;
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: space-between; */
+}
+
+.msg-list .li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 90rpx;
+  height: 1px;
+  background: #f0f0f0;
+}
+
+.msg-list .li .left {
+  margin-right: 35rpx;
+  font-size: 20rpx;
+  color: #8b8b8b;
+  font-family: PingFang SC;
+}
+
+.msg-list .li .left .year {
+  padding-top: 10rpx;
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #cccccc;
+  font-family: PingFang SC;
+  border-top: 1px solid #f0f0f0;
+}
+
+.msg-list .li .right {
+  font-size: 28rpx;
+  color: #8b8b8b;
+  font-family: PingFang SC;
+}
+
+.msg-list .li.new .right {
+  color: #2f2f2f;
+}
+
+.msg-list .li .right .watch {
+  color: #9dc0f1;
+  margin-top: 30rpx;
+}

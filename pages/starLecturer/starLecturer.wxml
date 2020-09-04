@@ -1,0 +1,50 @@
+<!--pages/starLecturer/starLecturer.wxml-->
+<view class="main">
+	<view class="details-banner">
+		<image src="{{urlBase+lecturer.image}}" mode="widthFix"></image>
+		<view class="txt pa-left-right-40">
+			<view class="mb-20 color-8b8b8b">同学你好</view>
+			<text class="font-55">{{lecturer.name}}\n{{lecturer.title}}</text>
+		</view>
+	</view>
+	<view class="text-style">
+		<view>
+			{{lecturer.summary}}
+		</view>
+		<view>
+			{{lecturer.description}}
+		</view>
+	</view>
+
+	<view class="wrap-container">
+		<view wx:if="{{courseList.length > 0}}">
+			<view class="title">讲师课程</view>
+			<view wx:if="{{showAll}}" class="course-list">
+				<view class='lis' wx:for="{{courseList}}" wx:key="index" data-id="{{item.id}}" bindtap="toPlay">
+					<image class='ico' src='../../images/ico-play.jpg'></image>
+					<view class='right'>{{item.title}}</view>
+				</view>
+			</view>
+			<view wx:else class="course-list">
+				<view class='lis' wx:for="{{courseList}}" wx:key="index" wx:if="{{index<5}}" data-id="{{item.id}}" bindtap="toPlay">
+					<image class='ico' src='../../images/ico-play.jpg'></image>
+					<view class='right'>{{item.title}}</view>
+				</view>
+			</view>
+			<view wx:if="{{!showAll}}" class="look-all" data-id="{{lecturer.id}}" bindtap="viewAll">查看全部</view>
+		</view>
+
+		<view class="title">推荐讲师</view>
+		<view class="lecturer-list">
+			<view wx:for="{{lecturerList}}" wx:key="index">
+				<view class='lis' data-id="{{item.id}}" bindtap="toStarLecturer">
+					<image class='ico' src='{{urlBase+item.headIcon}}'></image>
+					<view class='right'>
+						<view class="lecturer-title">{{item.title}}</view>
+						<text class="lecturer-name">{{item.name}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

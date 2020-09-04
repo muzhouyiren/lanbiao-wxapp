@@ -1,0 +1,34 @@
+<!--pages/cases/cases.wxml-->
+<view class="main">
+	<view class="details-banner">
+		<image src="{{caseData.image}}" mode="widthFix"></image>
+		<view class="txt pa-left-right-40 color-fff">
+			<view class="mb-20">学⻓说</view>
+			<text class="font-55">{{caseData.title}}</text>
+		</view>
+	</view>
+	<view class="text-style">
+		<view>
+			{{caseData.summary}}
+		</view>
+		<view>
+			{{caseData.detail}}
+		</view>
+	</view>
+
+	<view class="wrap-container">
+		<view class="title">相关推荐</view>
+		<view class="case-list">
+			<view wx:for="{{caseList}}" wx:key="index">
+				<view class='lis' data-id="{{item.id}}" bindtap="toCases">
+					<image class='ico' src='{{item.image}}' lazy-load="true"></image>
+					<view class='right'>
+						<view class="case-title">{{item.title}}</view>
+						<view class="case-name">{{item.summary}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+</view>

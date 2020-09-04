@@ -1,0 +1,68 @@
+<!--components/message/message.wxml-->
+<!-- 弹出层 -->
+<view catchtouchmove="preventTouchMove" wx:if="{{showModal}}">
+	<!-- 遮罩层 -->
+	<view class="mask"></view>
+	<!-- 弹出层 -->
+	<view class="modal" wx:if="{{showModal}}">
+		<text class="modal-title">站内消息</text>
+		<scroll-view scroll-y class="msg-list">
+			<view class="li {{item.status==0?'new':''}}" wx:for="{{dataList}}" wx:key="index" wx:for-item="item">
+				<view class="left">
+					<view>{{item.month}}/{{item.day}}</view>
+					<view class="year">{{item.year}}</view>
+				</view>
+				<view class="right">
+					<text>{{item.content}}</text>
+					<view wx:if="{{item.status == 0}}" class="watch" data-item="{{item}}" bindtap="clickMessage">点击查看</view>
+				</view>
+			</view>
+			<!-- <view class="li new">
+				<view class="left">
+					<view>02/21</view>
+					<view class="year">2020</view>
+				</view>
+				<view class="right">
+					<text>您有积分未领取~~ </text>
+				</view>
+			</view>
+			<view class="li">
+				<view class="left">
+					<view>02/21</view>
+					<view class="year">2020</view>
+				</view>
+				<view class="right">
+					<text>胡百精讲师更新课程了，40天成就新人王移动快来学习吧~ </text>
+				</view>
+			</view>
+			<view class="li">
+				<view class="left">
+					<view>02/21</view>
+					<view class="year">2020</view>
+				</view>
+				<view class="right">
+					<text>胡百精的直播课还有20分钟就要开始了，快来学习吧！</text>
+				</view>
+			</view>
+			<view class="li new">
+				<view class="left">
+					<view>02/21</view>
+					<view class="year">2020</view>
+				</view>
+				<view class="right">
+					<text>胡百精讲师更新课程了，40天成就新人王移动营销产品大数据分析，快来学习吧~ </text>
+				</view>
+			</view>
+			<view class="li new">
+				<view class="left">
+					<view>02/21</view>
+					<view class="year">2020</view>
+				</view>
+				<view class="right">
+					<text>您有积分未领取~~ </text>
+				</view>
+			</view> -->
+		</scroll-view>
+		<image bindtap="closeModal" class="modal-close" src="../../images/modal-close.png" mode="widthFix"></image>
+	</view>
+</view>

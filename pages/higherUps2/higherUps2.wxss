@@ -1,0 +1,19 @@
+/* pages/higherUps2/higherUps2.wxss */
+.micro {
+  position: absolute;
+  right: 37rpx;
+  bottom: 37rpx;
+  width: 43rpx;
+  height: 69rpx;
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 171rpx;
+  height: 171rpx;
+}
+.title {
+  padding: 35rpx 37rpx 50rpx;
+}

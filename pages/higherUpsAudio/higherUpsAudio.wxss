@@ -1,0 +1,52 @@
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 35rpx 37rpx 50rpx;
+  
+}
+.title text {
+  display: block;
+}
+.audio-detail {
+  padding: 39rpx 37rpx 50rpx;
+}
+.audio-box {
+  border-radius: 20rpx;
+  padding: 36rpx 48rpx 35rpx 36rpx; 
+  background: #f5f5f5;
+}
+.audio-box .tit {
+  font-size: 43.47rpx;
+  color: #2f2f2f;
+}
+.audio-box .source {
+  font-size: 28.98rpx;
+  color: #8b8b8b;
+  margin: 22rpx 0 20rpx;
+}
+.audio-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+slider{
+  margin: 10px 0;
+}
+.progress {
+  width: 80%;
+}
+.progress .time {
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28.98rpx;
+  color: #8b8b8b;
+}
+.control{
+  margin-top: -30rpx;
+  width: 43rpx;
+  height: 69rpx;
+}

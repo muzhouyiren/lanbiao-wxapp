@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "share-course": "/components/share-course/share-course"
+  }
+}

@@ -1,0 +1,4 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+<view class="main">
+	<image src="{{columnData.detail}}" mode="widthFix"></image>
+</view>

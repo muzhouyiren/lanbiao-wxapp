@@ -1,0 +1,78 @@
+/* pages/starLecturer/starLecturer.wxss */
+
+.details-banner .txt {
+  left: 37rpx;
+  right: 37rpx;
+}
+
+.text-style {
+  padding-bottom: 50rpx;
+}
+
+.title {
+  color: #2f2f2f;
+  font-size: 43.48rpx;
+  margin-bottom: 30rpx;
+  border-top: 1px solid #c5c5c5;
+  padding-top: 20rpx;
+}
+
+.lis {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  padding: 18rpx 0;
+  min-height: 70rpx;
+}
+
+.lis .ico {
+  flex-shrink: 0;
+  margin-top: 10rpx;
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.lis .right {
+  font-family: PingFangSC-Regular;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 616rpx;
+  color: #2f2f2f;
+  font-size: 32.61rpx;
+}
+
+.look-all {
+  color: #9dc0f1;
+  font-size: 25.36rpx;
+  text-align: center;
+  margin: 35rpx 0;
+}
+
+.lecturer-list .lis{
+  padding: 0;
+}
+.lecturer-list .lis .ico {
+  width: 122rpx;
+  height: 121rpx;
+  margin: 20rpx 0;
+}
+
+.lecturer-list .lis .right {
+  display: block;
+  padding: 35rpx 0 20rpx;
+  width: 532rpx;
+}
+
+.lecturer-list .lis .right .lecturer-title {
+  font-size: 32.61rpx;
+  color: #2f2f2f;
+  font-weight: 700;
+}
+
+.lecturer-list .lis .right .lecturer-name {
+  font-size: 25.36rpx;
+  color: #8b8b8b;
+}

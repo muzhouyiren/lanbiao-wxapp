@@ -1,0 +1,58 @@
+/* pages/buyH52/buyH52.wxss */
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.main .buy-h5-bg {
+  width: 100%;
+  height: 100%;
+}
+.buy-h5-title {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  width: 612rpx;
+  height: 62rpx;
+  margin-left: -306rpx;
+}
+.operation {
+  display: flex;
+  font-size: 29.98rpx;
+  color: #fff;
+  margin-top: 35rpx;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.operation .left,.operation .right {
+  display: flex;
+  width: 40%;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.operation image {
+  margin-right: 13rpx;
+  padding-top:6rpx;
+}
+.operation .left .icon-ting {
+  width: 33rpx;
+  height: 29rpx;
+}
+.operation .right .icon-praise {
+  width: 28rpx;
+  height: 32rpx;
+}
+
+.buy-h5-down {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 600rpx;
+  height: 135rpx;
+  margin-left: -300rpx;
+}
+.buy-h5-down .buy-btn {
+  margin-top: 60rpx;
+}

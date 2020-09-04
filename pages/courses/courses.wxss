@@ -1,0 +1,250 @@
+/* pages/courses/courses.wxss */
+.main {
+  background: #fcfcfc;
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 168rpx;
+  height: 169rpx;
+}
+
+.icon-share{
+  position: absolute;
+  top: 36rpx;
+  right: 36rpx;
+  width: 31rpx;
+  height: 31rpx;
+}
+
+.operation {
+  display: flex;
+  font-size: 30.19rpx;
+  color: #8b8b8b;
+  margin-bottom: 35rpx;
+}
+.operation .left,.operation .right {
+  display: flex;
+  width: 33.33%;
+}
+.operation image {
+  margin-right: 13rpx;
+  padding-top:6rpx;
+}
+.operation .left .icon-ting {
+  width: 33rpx;
+  height: 29rpx;
+}
+.operation .right .icon-praise {
+  width: 28rpx;
+  height: 32rpx;
+}
+
+.course-info {
+  color: #8b8b8b;
+  font-size: 30rpx;
+  line-height: 45rpx;
+  /* display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden; */
+}
+.course-details {
+  line-height: 50rpx;
+  margin-bottom: 38rpx;
+  font-weight: 700;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.course {
+  font-size: 43.48rpx;
+  color: #2f2f2f;
+}
+.buy {
+  font-size: 32.61rpx;
+  color: #9dc0f1;
+}
+
+.lis {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  padding-top: 18rpx;
+  min-height: 70rpx;
+}
+.lis.on .right{
+  border: none;
+}
+.lis .ico {
+  flex-shrink: 0;
+  margin-top: 10rpx;
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.lis .right {
+  font-family: PingFangSC-Regular;
+  display: flex;
+  flex-flow: row nowrap;
+  padding-bottom: 18rpx;
+  border-bottom: 1px solid #dddddd;
+  width: 616rpx;
+  color: #2f2f2f;
+  font-size: 32.61rpx;
+  line-height: 50rpx;
+}
+
+.lis .right .course-num {
+  margin-right: 20rpx;
+  white-space:nowrap;
+  color: #2f2f2f;
+  font-size: 32.61rpx;
+}
+.lis .right .course-name{
+  color: #2f2f2f;
+  font-size: 32.61rpx;
+}
+.uni-list {
+  margin-left: 170rpx;
+  width: 510rpx;
+}
+.uni-list .uni-list-cell {
+  padding: 18rpx 0;
+  border-bottom: 1px solid #dddddd;
+  color: #8b8b8b;
+  font-size: 32.61rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.yi-share{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 20rpx;
+  font-size: 25.36rpx;
+  color: #9dc0f1;
+}
+.yi-share image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+  padding-bottom: 5rpx;
+  display: inline-block;
+  transform: translateY(2px)
+}
+
+button.buy-btn {
+  float: left;
+  position:relative;
+  padding: 0;
+  /* width: 45% !important; */
+  width: 321rpx;
+  height: 85rpx;
+  line-height: 85rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #9dc0f1;
+  border-radius: 40rpx;
+  /* margin: 70rpx 0 100rpx; */
+  margin-top: 70rpx;
+  margin-bottom: 68rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  /* display: inline-block; */
+  /* padding: 8px 5rpx; */
+}
+button::after{
+  border: none;
+}
+.other-button-hover {
+  color: #9dc0f1;
+  background-color: #f0f0f0;
+}
+
+
+.btns {
+  margin-top: 70rpx;
+}
+.btns .price{
+  position: absolute;
+  top: -25%;
+  right: -14rpx;
+  padding: 5rpx 12rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  background: #ff5400;
+  font-size: 24rpx;
+}
+.btn-box {
+  float: left;
+  position: relative;
+  width: 321rpx; 
+  height: 85rpx;
+  margin-bottom: 105rpx;
+}
+
+.btns button.buy-btn {
+  margin-bottom: 68rpx;
+  margin-top: 0;
+}
+/* 遮罩层 */
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #000;
+  /* z-index:998; */
+  opacity: 0.7;
+}
+
+/* 弹出层 */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 621rpx;
+  min-height: 621rpx;
+  /* z-index:999; */
+  line-height: 30rpx;
+  margin: 0 auto;
+  text-align: center;
+  /* padding: 50rpx 45rpx 140rpx 48rpx; */
+  background-color: #fff;
+  border-radius: 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38rpx;
+}
+.modal .modal-close {
+  position: absolute;
+  bottom: -48rpx;
+  left: 50%;
+  width: 96rpx;
+  height: 96rpx;
+  transform: translate(-50%, 0);
+}
+.color-blue {
+  color:#9dc0f1;
+}
+.modal-2999-txt {
+  display: inline-block;
+  padding-top: 140rpx;
+  font-size: 38rpx;
+  color: #2f2f2f;
+}
+.modal-qrcode {
+  margin: 120rpx auto 150rpx;
+  width: 120rpx;
+  height: 120rpx;
+}

@@ -1,0 +1,112 @@
+/**index.wxss**/
+.main {
+  padding: 0 36rpx;
+  font-size: 30.19rpx;
+  color: #2f2f2f;
+}
+.main .section {
+  position: relative;
+  font-weight: 700;
+  margin: 36rpx 0;
+  border-radius: 30rpx;
+  box-shadow:0px 0 40rpx rgba(0, 0, 0, 0.3);
+  background: #f5f5f5;
+  overflow: hidden;
+}
+.main .section .up-txt {
+  top: 60rpx;
+}
+.main .section .down-txt {
+  bottom: 35rpx;
+}
+
+.main .section .img-02-txt {
+  top: 36rpx;
+}
+.main .section .say-title{
+  padding-left: 40rpx;
+  height: 115rpx;
+  line-height: 115rpx;
+}
+.main .section image.micro {
+  position: absolute;
+  right: 40rpx;
+  top: 50%;
+  width: 43rpx;
+  height: 69rpx;
+  margin-top: 0;
+}
+.main .section .img-04-txt {
+  padding: 35rpx 40rpx 60rpx;
+}
+.video-box {
+  position: relative;
+}
+.video-box .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 213rpx;
+  height: 213rpx;
+}
+.img-05-txt{
+  padding: 35rpx 0 50rpx;
+}
+.img-06-txt {
+  padding: 35rpx 0;
+}
+.tel {
+  color: #2f2f2f;
+  line-height: 100rpx;
+}
+
+
+
+
+
+
+
+
+/* .main>view {
+  position: relative;
+  font-weight: 700;
+}
+.main view image {
+  margin-top: -80rpx;
+}
+
+.main view:first-child image {
+  margin-top: 0rpx;
+}
+.main view .up-txt {
+  top: 12%;
+}
+.main view .down-txt {
+  bottom: 10%;
+}
+
+.main view .img-02-txt {
+  top: 10%;
+}
+.main view .say-title{
+  bottom: 10%;
+}
+.main view image.micro {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  width: 43rpx;
+  height: 69rpx;
+  margin-top: 0;
+}
+.main view .img-04-txt {
+  bottom: 12%;
+}
+.img-05-txt{
+  bottom: 20%;
+}
+.tel {
+  color: #2f2f2f;
+  line-height: 100rpx;
+} */

@@ -1,0 +1,97 @@
+<!--pages/myCourse/myCourse.wxml-->
+<view class="main">
+	<view class="pr">
+		<video class="video" id="myVideo" poster="{{lesson.course.image}}" src="{{lesson.videoUrl}}" controls enable-progress-gesture="false" autoplay="true" bindplay="play" bindended="playFinished" bindtimeupdate="playProgress">
+			<button id="user" animation="{{ani}}">{{motto}}</button>
+		</video>
+		<!-- <image src="../../images/courses-banner.jpg" mode="widthFix"></image>
+		<image class="play-btn" src="../../images/course-play.png" mode="widthFix"></image> -->
+	</view>
+	<view class="wrap-center">
+		<view class="font-55 mb-40">{{lesson.course.title}}</view>
+		<view class="operation">
+			<view class="left">
+				<image class="icon-ting" src="../../images/icon-ting.png" mode="widthFix"></image>
+				试听 {{auditionCount}}
+			</view>
+			<view class="right" bindtap="addLike">
+				<image class="icon-praise" src="../../images/icon-praise.png" mode="widthFix"></image>
+				点赞 {{likeCount}}
+			</view>
+		</view>
+		<view class="btn-div">
+			<button wx:if="{{lesson.preLessonId > 0}}" class="section-btn next" type="default" hover-class="other-button-hover" bindtap="toPrev">上一节</button>
+			<button wx:else class="section-btn" type="default" hover-class="other-button-hover" bindtap="toPrev">上一节</button>
+			<button wx:if="{{lesson.nextLessonId > 0}}" class="section-btn next" type="default" hover-class="other-button-hover" bindtap="toNext">下一节</button>
+			<button wx:else class="section-btn" type="default" hover-class="other-button-hover" bindtap="toNext">下一节</button>
+		</view>
+		<view wx:if="{{lesson.knowledgeList != null && lesson.knowledgeList.length > 0}}">
+			<view class="course-section">
+				<view class="square"></view>
+				<view>知识点</view>
+			</view>
+			<view class="knowledge-img">
+				<view wx:for="{{lesson.knowledgeList}}" wx:key="index">
+					<image src="{{urlBase + item.image}}" mode="widthFix"></image>
+				</view>
+			</view>
+		</view>
+		<view class="course-section">
+			<view class="square orange-bg"></view>
+			<view>作业</view>
+		</view>
+		<view class="home-work">
+			<view wx:if="{{lesson.taskCorrect.level > 0}}">
+				<!-- 不太理想 -->
+				<image class='level-img' src="../../images/level_1.png" mode="widthFix" wx:if="{{lesson.taskCorrect.level == 1}}"></image>
+				<!-- 勉勉强强 -->
+				<image class='level-img' src="../../images/level_2.png" mode="widthFix" wx:elif="{{lesson.taskCorrect.level == 2}}"></image>
+				<!-- 再接再厉 -->
+				<image class='level-img' src="../../images/level_3.png" mode="widthFix" wx:elif="{{lesson.taskCorrect.level == 3}}"></image>
+				<!-- 值得表扬 -->
+				<image class='level-img' src="../../images/level_4.png" mode="widthFix" wx:elif="{{lesson.taskCorrect.level == 4}}"></image>
+				<!-- 优秀如你 -->
+				<image class='level-img' src="../../images/level_5.png" mode="widthFix" wx:else="{{lesson.taskCorrect.level == 5}}"></image>
+			</view>
+			<view class="title" data-url="{{lesson.task.taskUrl}}" bindtap="toTask">{{lesson.task.task}}</view>
+			<form bindsubmit="bindTextareaSubmit" bindreset="formReset">
+				<textarea wx:if="{{lesson.taskCorrect == null}}" class="textarea" placeholder="请在此编辑答案" name="textarea" />
+				<view wx:else class="textarea">{{lesson.taskCorrect.answer}}</view>
+				<view wx:if="{{lesson.taskCorrect.comment != null && lesson.taskCorrect.comment != ''}}" class="teacher">
+					{{lesson.taskCorrect.comment}}
+				</view>
+				<view class="btn-area" wx:if="{{lesson.taskCorrect == null}}">
+					<button class="reset" formType="reset">取消</button>
+					<button formType="submit">提交</button>
+				</view>
+				<!-- <button form-type="submit"> 提交 </button> -->
+			</form>
+		</view>
+
+		<view class="course-section">
+			<view class="square green-bg"></view>
+			<view>提问</view>
+		</view>
+		<view class="home-work question-work">
+			<view class="chat-room">
+				<view wx:for="{{lesson.questionList}}" wx:key="index">
+					<view wx:if="{{item.status == 1}}">
+						<view><text class="">{{item.question}}</text></view>
+						<view><text class="answer">{{item.answer == null?'待老师回答':item.answer}}</text></view>
+					</view>
+				</view>
+			</view>
+			<view class="question-form">
+				<form bindsubmit="sendQuestion">
+					<view class="clearfix">
+						<input class="question-input" placeholder="请用一句话描述您的问题...." placeholder-class="placeholder-style" name="question" />
+						<view class="send-box">
+							<button formType="submit">发送</button>
+							<image class='send-img' src="../../images/icon-send.png" mode="widthFix"></image>
+						</view>
+					</view>
+				</form>
+			</view>
+		</view>
+	</view>
+</view>

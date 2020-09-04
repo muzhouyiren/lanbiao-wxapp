@@ -1,0 +1,26 @@
+<!--pages/buyH5/buyH5.wxml-->
+<view class="main">
+  <view class="pr">
+    <image src="../../images/courses-banner.jpg" mode="widthFix"></image>
+    <image class="play-btn" src="../../images/course-play.png" mode="widthFix"></image>
+  </view>
+  <view class="wrap-center">
+    <view class="mb-20 color-8b8b8b">{{dataDetails.type}}</view>
+    <view class="font-55 mb-40">{{dataDetails.title}}</view>
+    <view class="operation">
+      <view class="left">
+        <image class="icon-ting" src="../../images/icon-ting.png" mode="widthFix"></image>
+        试听 {{dataDetails.audition}}
+      </view>
+      <view class="right">
+        <image class="icon-praise" src="../../images/icon-praise.png" mode="widthFix"></image>
+        点赞 {{dataDetails.praise}}
+      </view>
+    </view>
+    <view class="course-info">
+      {{dataDetails.des}}
+    </view>
+
+    <button class="buy-btn" type="default" hover-class="other-button-hover" bindtap="toOrder">立即购买</button>
+  </view>
+</view>

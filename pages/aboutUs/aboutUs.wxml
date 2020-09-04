@@ -1,0 +1,12 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+<view class="main">
+	<view class="details-banner">
+		<image src="{{columnData.image}}" mode="widthFix"></image>
+		<view class="txt pa-left-right-40 color-fff">
+			<text class="font-66">{{columnData.title==null?'':columnData.title}}\n{{columnData.subTitle==null?'':columnData.subTitle}}</text>
+		</view>
+	</view>
+	<view class="text-style">
+		{{columnData.detail==null?'':columnData.detail}}
+	</view>
+</view>
